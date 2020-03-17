@@ -18,18 +18,29 @@
 </div>
 
 <style>
-  h2 {
-    margin: 24px 0;
-    display: flex;
-    justify-content: space-evenly;
-  }
+  /* @media screen and (min-width: 481px) {
+    #cardID {
+      display: flex;
+      justify-content: space-around;
+    }
+  } */
+
   .sections {
     margin: 16px 0 24px 0;
     color: #E2E8F0;
     justify-content: space-around;
     display: flex;
     flex-wrap: wrap;
-
+  }
+  @media only screen and (max-width: 480px) {
+    .sections {
+        display: block;
+    }
+  }
+  h2 {
+    margin: 24px 0;
+    display: flex;
+    justify-content: space-evenly;
   }
   .card {
     flex-basis: 25%;

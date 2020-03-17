@@ -7,10 +7,11 @@
   } from "sveltestrap";
 </script>
 
-<div style="display: flex; justify-content: space-around;">
+<div id='cardID'>
   <Card body
     color="success"
-    class="mb-3">
+    class="mb-3"
+    >
     <CardBody>
       <h1>Dos</h1>
       <h6>Practice frequent hand washing.</h6>
@@ -50,6 +51,20 @@
 </div>
 
 <style>
+
+  @media screen and (min-width: 481px) {
+    #cardID {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    #cardID {
+        display: block;
+    }
+  }
+
   h6 {
     color: white;
   }
