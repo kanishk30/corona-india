@@ -18,13 +18,6 @@
 </div>
 
 <style>
-  /* @media screen and (min-width: 481px) {
-    #cardID {
-      display: flex;
-      justify-content: space-around;
-    }
-  } */
-
   .sections {
     margin: 16px 0 24px 0;
     color: #E2E8F0;
