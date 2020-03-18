@@ -1,42 +1,22 @@
-<script>
-  import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem
-  } from 'sveltestrap';
+<header>
+  Covid19 - India
+</header>
 
-  let isOpen = false;
-
-  function handleUpdate(event) {
-    isOpen = event.detail.isOpen;
-  }
-</script>
-
-<Navbar color="light" light expand="md">
-  <NavbarBrand href="/">Corona India</NavbarBrand>
-  <NavbarToggler on:click={() => (isOpen = !isOpen)} />
-  <Collapse {isOpen} navbar expand="md" on:update={handleUpdate}>
-    <Nav class="ml-auto" navbar>
-      <NavItem>
-        <NavLink href="#components/">Components</NavLink>
-      </NavItem>
-      <UncontrolledDropdown nav inNavbar>
-        <DropdownToggle nav caret>Options</DropdownToggle>
-        <DropdownMenu right>
-          <DropdownItem>Option 1</DropdownItem>
-          <DropdownItem>Option 2</DropdownItem>
-          <DropdownItem divider />
-          <DropdownItem>Reset</DropdownItem>
-        </DropdownMenu>
-      </UncontrolledDropdown>
-    </Nav>
-  </Collapse>
-</Navbar>
+<style>
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  color: #FF8800;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  font-weight: 700;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  z-index: 999999;
+}
+</style>

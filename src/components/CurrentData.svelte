@@ -75,6 +75,16 @@
   afterUpdate(createChart)
 </script>
 
-<canvas id="myChart"
+<div class="my-canvas">
+  <canvas id="myChart"
   width="2"
-  height="1"></canvas>
+  height="1">
+</canvas>
+</div>
+
+<style>
+.my-canvas {
+  height: 80%;
+  width: 80%;
+}
+</style>

@@ -8,46 +8,24 @@
 </script>
 
 <div id='cardID'>
-  <Card body
-    color="success"
-    class="mb-3"
-    >
-    <CardBody>
-      <h1>Dos</h1>
-      <h6>Practice frequent hand washing.</h6>
-      <h6>Cover your nose and
-        mouth with
-        handkerchief/tissue while
-        sneezing and coughing</h6>
-      <h6>Throw used
-        tissues into closed
-        bins immediately
-        after use</h6>
-      <h6>See a doctor if you feel unwell
-        (fever, difficult breathing and
-        cough)</h6>
-      <h6>Avoid participating
-        in large gatherings</h6>
-    </CardBody>
+    <div class="left">
+      <h3>DOs</h3>
+      <p>Stay home when you are sick.</p>
+<p>Avoid touching your eyes, nose, and mouth.</p>
+<p>Clean AND disinfect frequently touched surfaces daily.</p>
+<p>Cover your cough or sneeze with a tissue, then throw the tissue in the trash.</p>
+<p>Avoid close contact with people who are sick.</p>
+<p>Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing. </p>
+    </div>
 
-  </Card>
-  <Card body
-    color="danger"
-    class="mb-3">
-    <CardBody>
-      <h1>Donts</h1>
-      <h6>Have a close contact
-        with anyone, if you’re
-        experiencing cough
-        and fever</h6>
-      <h6>Touch your eyes,
-        nose and mouth</h6>
-      <h6>nose and mouth Spit in public</h6>
-      <h6>Wear face mask if you aren't infected or aren't taking care of individuals infected by Covid19
-      </h6>
-    </CardBody>
-
-  </Card>
+    <div class="right">
+      <h3>DONTs</h3>
+      <p>Shake hands with others</p>
+<p>Touch your eyes, nose or mouth if your hands are not clean</p>
+<p>Wear face mask if you aren't infected or aren't taking care of individuals infected by Covid19</p>
+<p>Go to to pharmacy or hospital. If you have corona like symptoms, call 1500 instead</p>
+<p>Go out in groups or where there are a large number of people. Avoid crowds as much as possible</p>
+    </div>
 </div>
 
 <style>
@@ -55,21 +33,39 @@
   @media screen and (min-width: 481px) {
     #cardID {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
+      margin: 48px 0;
+        /* background-color: black; */
+
     }
   }
 
   @media only screen and (max-width: 480px) {
     #cardID {
         display: block;
+        /* background-color: black; */
     }
   }
 
-  h6 {
-    color: white;
+  .left {
+    flex-basis: 45%;
+    background-color: rgb(19, 153, 108);
+    padding: 24px;
+  }
+  .right {
+    text-align: right;
+    flex-basis: 45%;
+    background-color: rgb(194, 16, 16);
+    padding: 24px;
   }
 
-  h1 {
+  p {
+    color: white;
+    line-height: 30px;
+    font-size: 20px;
+  }
+
+  h3 {
     color: white
   }
 </style>

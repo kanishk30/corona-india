@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<h2>Know the Symptoms</h2>
+<h2>Know the Symptoms and ACT</h2>
 <div class="sections">
   <div class="card">
     <img src='images/fever.png'>
@@ -19,7 +19,7 @@
 
 <style>
   .sections {
-    margin: 16px 0 24px 0;
+    margin: 32px 0;
     color: #E2E8F0;
     justify-content: space-around;
     display: flex;
@@ -37,13 +37,10 @@
   }
   .card {
     flex-basis: 25%;
-    background-color: #F7FAFC;
+    background-color: #ff188c;
     border-radius: 0.5rem;
     height: 100%;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding: 3rem 1.5rem;
     box-shadow: 0 0px 1px 0 rgba(0,0,0,0.4), 0 1px 2px 0 rgba(0,0,0,0.06);
   }
   img {
@@ -54,11 +51,10 @@
     height: 8rem;
   }
   p {
-    font-family: "Raleway",-apple-system,BlinkMacSystemFont,sans-serif,"Apple Color Emoji";
     text-align: center;
     font-weight: 700;
     font-size: 20px;
     line-height: 0;
-    color: #718096;
+    color: #fff
   }
 </style>

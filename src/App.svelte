@@ -29,16 +29,21 @@
 <main>
 	<Help />
 	{#if isResolved}
-	<Banner {data}/>
+	<section>
+		<Banner {data}/>
+		<CurrentData {data} />
+	</section>
 	{/if}
 	<Symptoms />
 	<DosDonts />
 	{#if isResolved}
-	<CurrentData {data} />
 	<CasesBreakup {data} />
 	{/if}
 </main>
 
 <style>
-
+	section {
+		display: flex;
+		margin: 2rem 0;
+	}
 </style>

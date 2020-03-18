@@ -13,6 +13,7 @@
     $: recovered = 0;
     $: active = 0;
     $: critical = 0;
+    $: mortalityRate = (((deaths + todayDeaths) / cases) * 100).toFixed(2);
 
     export let data = [];
     var myChart;
@@ -71,10 +72,10 @@
         active = data.reduce((a, b) => ({active: a.active + b.active})).active;
         critical = data.reduce((a, b) => ({critical: a.critical + b.critical})).critical;
 
-        values.push(cases, todayCases, deaths, todayDeaths, recovered, active, critical);
+        values.push( todayCases, deaths, todayDeaths, recovered, active, critical);
         values = values;
 
-        labels.push('cases', 'todayCases', 'deaths', 'todayDeaths', 'recovered', 'active', 'critical');
+        labels.push('todayCases', 'deaths', 'todayDeaths', 'recovered', 'active', 'critical');
         labels = labels;
       }
     }
@@ -82,9 +83,42 @@
     afterUpdate(createChart)
   </script>
 
-  <canvas id="breakdown"
-    width="2"
-    height="1"></canvas>
+  <section>
+    <div class="left">
+      <p>
+        COVID-19 is a new disease and world is still learning how it spreads, the severity of illness it causes, and to what extent it may spread in the world.
+      </p>
+      <p>
+        With total number of cases being {cases}, mortality rate stands at {mortalityRate}%.
+      </p>
+    </div>
+    <div class="right">
+      <canvas id="breakdown"
+        width="2"
+        height="1"></canvas>
+    </div>
+  </section>
 
-
-    <!-- <RecoveredChart data={data}> </RecoveredChart> -->
+<style>
+  section {
+    display: flex;
+    justify-content: space-between;
+		margin: 2rem 0;
+  }
+  .left {
+    background: #2bbdd4;
+    color: white;
+    padding: 24px;
+    flex-basis: 50%;
+  }
+  p {
+    color: white;
+    font-size: 24px;
+    line-height: 2;
+  }
+  .right {
+  height: 80%;
+  width: 80%;
+  flex-basis: 50%;
+  }
+  </style>
