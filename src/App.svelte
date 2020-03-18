@@ -10,6 +10,7 @@
 	import DosDonts from './components/DosDonts.svelte';
 	import Banner from './components/Banner.svelte';
 	import Symptoms from './components/Symptoms.svelte';
+	import Footer from './components/Footer.svelte';
 
 	let isResolved = false;
 	$: data = [];
@@ -29,17 +30,18 @@
 <main>
 	<Help />
 	{#if isResolved}
+	<CasesBreakup {data} />
+	{/if}
+	<Symptoms />
+	{#if isResolved}
 	<section>
 		<Banner {data}/>
 		<CurrentData {data} />
 	</section>
 	{/if}
-	<Symptoms />
 	<DosDonts />
-	{#if isResolved}
-	<CasesBreakup {data} />
-	{/if}
 </main>
+<Footer></Footer>
 
 <style>
 	section {
