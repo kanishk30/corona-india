@@ -51,12 +51,16 @@
     flex-basis: 45%;
     background-color: rgb(19, 153, 108);
     padding: 24px;
+  border-radius: 4px;
+      box-shadow: 2px 0px 3px 0px rgb(0,0,0,.26);
   }
   .right {
     text-align: right;
     flex-basis: 45%;
-    background-color: rgb(194, 16, 16);
+    background-color: rgb(244, 59, 59);
     padding: 24px;
+    border-radius: 8px;
+      box-shadow: 2px 0px 3px 0px rgb(0,0,0,.26);
   }
 
   p {
